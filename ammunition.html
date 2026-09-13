@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ammunition — Armory Atlas</title>
+  <meta name="description" content="A searchable index of common cartridges — .22 LR, 9×19mm, .45 ACP, 5.56×45mm, 7.62×39mm, .308, 12 gauge, .50 BMG — with bullet diameter, weight, velocity, and energy.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><span class="brand__mark"></span>Armory Atlas</a>
+      <nav class="nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="pistols.html">Pistols</a>
+        <a href="rifles.html">Rifles</a>
+        <a href="shotguns.html">Shotguns</a>
+        <a href="ammunition.html" class="is-active">Ammunition</a>
+        <a href="safety.html">Safety</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Class 04 · Cartridges</span>
+        <h1>Ammunition</h1>
+        <p class="lead">A complete round of ammunition — the <strong>cartridge</strong> — bundles four things: a <strong>bullet</strong> (the projectile), a measure of <strong>propellant</strong> (powder), a <strong>primer</strong> (the striking-sensitive igniter), and a <strong>case</strong> that holds it all. Metric names state bullet diameter × case length in millimetres (<code>9×19mm</code>); imperial names mix calibre with year or powder charge (<code>.30-30</code>: .30-inch bore, 30 grains of the original black powder).</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Cartridge index</span>
+          <h2>Eight rounds that matter</h2>
+          <p class="muted">Values are typical for standard factory loads; bullet weight and loading change velocity and energy considerably. Type the name of a cartridge, a calibre, or a use ("handgun", "hunting") to filter.</p>
+        </div>
+
+        <div class="filter-bar">
+          <input type="search" id="tableFilter" placeholder="Filter cartridges… e.g. 9mm, rifle, rimfire" aria-label="Filter cartridge table">
+          <span class="count" id="filterCount">8 cartridges</span>
+        </div>
+
+        <div class="table-wrap">
+          <div class="table-scroll">
+            <table class="data-table" id="ammoTable">
+              <thead>
+                <tr>
+                  <th>Cartridge</th>
+                  <th>Introduced</th>
+                  <th>Origin</th>
+                  <th>Primer</th>
+                  <th class="num">Bullet dia.</th>
+                  <th class="num">Bullet wt.</th>
+                  <th class="num">Velocity</th>
+                  <th class="num">Energy</th>
+                  <th>Typical use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="name">.22 LR</span></td>
+                  <td>1887</td><td>USA</td><td>Rimfire</td>
+                  <td class="num">5.7 mm</td><td class="num">2.6 g</td><td class="num">≈380 m/s</td><td class="num">≈130 J</td>
+                  <td>Training, small-game hunting — the most produced cartridge ever</td>
+                </tr>
+                <tr>
+                  <td><span class="name">9×19mm Parabellum</span></td>
+                  <td>1902</td><td>Germany</td><td>Centerfire</td>
+                  <td class="num">9.0 mm</td><td class="num">7.5 g</td><td class="num">≈360 m/s</td><td class="num">≈500 J</td>
+                  <td>The world's most common handgun and submachine-gun round</td>
+                </tr>
+                <tr>
+                  <td><span class="name">.45 ACP</span></td>
+                  <td>1905</td><td>USA</td><td>Centerfire</td>
+                  <td class="num">11.5 mm</td><td class="num">14.9 g</td><td class="num">≈260 m/s</td><td class="num">≈560 J</td>
+                  <td>Large-calibre pistol round, developed with the M1911</td>
+                </tr>
+                <tr>
+                  <td><span class="name">5.56×45mm NATO</span></td>
+                  <td>1963 (.223 Rem)</td><td>USA</td><td>Centerfire</td>
+                  <td class="num">5.7 mm</td><td class="num">4.0 g</td><td class="num">≈940 m/s</td><td class="num">≈1,770 J</td>
+                  <td>Standard assault-rifle round of NATO armies</td>
+                </tr>
+                <tr>
+                  <td><span class="name">7.62×39mm</span></td>
+                  <td>1943</td><td>USSR</td><td>Centerfire</td>
+                  <td class="num">7.9 mm</td><td class="num">8.0 g</td><td class="num">≈715 m/s</td><td class="num">≈2,000 J</td>
+                  <td>Intermediate round of the AK-47 and SKS</td>
+                </tr>
+                <tr>
+                  <td><span class="name">7.62×51mm NATO / .308 Win</span></td>
+                  <td>1954</td><td>USA</td><td>Centerfire</td>
+                  <td class="num">7.8 mm</td><td class="num">9.5 g</td><td class="num">≈840 m/s</td><td class="num">≈3,350 J</td>
+                  <td>Battle and sniper rifles, deer hunting at longer range</td>
+                </tr>
+                <tr>
+                  <td><span class="name">12 gauge (2¾″ shell)</span></td>
+                  <td>1860s—�0S</td><td>UK / USA</td><td>Centerfire</td>
+                  <td class="num">18.5 mm bore</td><td class="num">≈32 g shot</td><td class="num">≈400 m/s</td><td class="num">≈2,400 J</td>
+                  <td>Shotguns — birdshot, buckshot, or slugs for hunting and defence</td>
+                </tr>
+                <tr>
+                  <td><span class="name">.50 BMG (12.7×99mm)</span></td>
+                  <td>1921</td><td>USA</td><td>Centerfire</td>
+                  <td class="num">12.9 mm</td><td class="num">41.9 g</td><td class="num">≈890 m/s</td><td class="num">≈16,600 J</td>
+                  <td>Heavy machine guns and long-range rifles</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Glossary</span>
+          <h2>Reading the numbers</h2>
+        </div>
+
+        <details class="collapsible" open>
+          <summary>Rimfire vs centerfire</summary>
+          <div class="body">
+            <p>These describe where the primer sits. In <strong>rimfire</strong> cartridges the priming compound is spun into the hollow rim, and the firing pin crushes the rim itself — cheap, but limited to low pressures, which is why only small rounds like the .22 LR remain rimfire. In <strong>centerfire</strong> rounds a separate primer cap sits in the centre of the case head; it can be replaced and the case reloaded, and it safely handles the high pressures of modern rifle and pistol rounds.</p>
+          </div>
+        </details>
+        <details class="collapsible">
+          <summary>Velocity and energy — what they mean</summary>
+          <div class="body">
+            <p><strong>Muzzle velocity</strong> is how fast the bullet leaves the barrel; faster means a flatter trajectory and less need to compensate for distance. <strong>Muzzle energy</strong> (in joules) is the kinetic work the bullet carries — roughly, its potential effect on a target — and scales with both mass and the square of speed. A .22 LR and a 5.56mm bullet have nearly the same diameter, but the 5.56 carries well over ten times the energy.</p>
+          </div>
+        </details>
+        <details class="collapsible">
+          <summary>Calibre, gauge, and naming quirks</summary>
+          <div class="body">
+            <p>"Calibre" is bore diameter — .45 means roughly 0.45 inch, 9mm means 9 millimetres — but names are historical, not exact: a .38 Special actually uses a .357-inch bullet. Shotguns use <strong>gauge</strong>, where the number of lead balls of bore diameter that weigh one pound gives the designation (12-gauge = twelve balls to the pound). Metric rifle names give diameter × case length, so 7.62×39mm and 7.62×51mm share a bullet diameter but the longer case holds far more powder.</p>
+          </div>
+        </details>
+
+        <div class="callout">
+          <div class="callout__title">Cross-reference</div>
+          <p>Wondering which firearm fires which round? Every profile on the <a href="pistols.html">Pistols</a>, <a href="rifles.html">Rifles</a>, and <a href="shotguns.html">Shotguns</a> pages lists its cartridge as the first chip on its card.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="site-footer__brand">Armory Atlas</p>
+      <p>Armory Atlas is an educational reference and does not sell firearms or ammunition, nor does it provide instruction in their manufacture or use. Firearm laws vary widely by country and region — always check and comply with the law where you live. In India, civilian possession of a firearm requires a licence under the Arms Act, 1959 and the Arms Rules, 2016.</p>
+      <p class="site-footer__fine">© <span data-year>2026</span> Armory Atlas · Placeholder content for demonstration — verify and replace with your own before publishing.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
